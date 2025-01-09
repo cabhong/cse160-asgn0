@@ -94,6 +94,15 @@ function handleDrawOperationEvent() {
         console.log("Magnitude v1: " + v1.magnitude())
         console.log("Magnitude v2: " + v2.magnitude())
     }
+    else if(option === "Normalize") {
+        v3.set(v1)
+        v3.normalize()
+        drawVector(v3, "green")
+
+        v4.set(v2)
+        v4.normalize()
+        drawVector(v4, "green")
+    }
     else if(option === "Angle Between") {
         console.log("Angle: " + ((180/Math.PI)*Math.acos(Vector3.dot(v1, v2)/(v1.magnitude() * v2.magnitude()))))
     }
